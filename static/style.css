@@ -1,0 +1,15 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom cursor */
+body {
+    cursor: url('../icons/cursor1.png'), auto;
+}
+
+p {
+    font-size: 16px;
+}
