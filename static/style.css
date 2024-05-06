@@ -10,6 +10,13 @@ body {
     cursor: url('../icons/cursor1.png'), auto;
 }
 
+/* Change cursor on links hover */
+a:hover {
+    cursor: url('../icons/cursor2.png'), auto;
+}
 p {
     font-size: 16px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
