@@ -79,3 +79,40 @@ p {
     object-fit: contain;
     transform: scale(2);
 }
+
+.index_tree {
+    position: relative;
+  }
+  
+  .tree {
+    width: 320px;
+  }
+  
+  .leaves {
+    position: absolute;
+    width: 10px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  /* #leaf1 {
+    top: 100px;
+    left: 50px;
+  } */
+
+  #leaf1 {
+    top: 120px;
+    left: 200px;
+  }
+  
+  #leaf2 {
+    top: 45px;
+    right: 64px;
+  }
+  
+  #leaf3 {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
