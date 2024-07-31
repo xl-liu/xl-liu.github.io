@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: helveticaNeue;
-    src: url("../media/helvetica-neue-5");
+    src: url("../media/helvetica-neue-5/HelveticaNeueLight.otf");
 }
 
 /* Custom cursor */
@@ -78,6 +78,27 @@ p {
     max-height: 100%;
     object-fit: contain;
     transform: scale(2);
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    left: 60px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    font-family: helveticaNeue;
+}
+
+.image-container:hover .hover-text {
+    display: inline;
 }
 
 .index_tree {
