@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'helvetica-neue-5';  /* Give your font a name */
+  src: url('../media/helvetica-neue-5/HelveticaNeueLight.otf') format('truetype'),       /* .ttf file */
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: url('icons/cursor1.png') 16 16, pointer;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+/* .nav-item:hover {
+  transform: scale(1.1);
+} */
+
+.nav-item img {
+  width: 64px;
+  height: 64px;
+  /* margin-bottom: 0.5rem; */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Hide hover icon by default */
+.icon-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide text by default */
+.nav-text {
+  font-family: 'helvetica-neue-5';
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+/* Show hover icon and hide default icon on hover */
+.nav-item:hover .icon-hover {
+  opacity: 1;
+}
+
+.nav-item:hover .icon-default {
+  opacity: 0;
+}
+
+/* Show and animate text on hover */
+.nav-item:hover .nav-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.profile-photo {
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  transition: transform 0.1s ease;
+}
+
+.about-text {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 0.8 rem;
+  font-family: 'helvetica-neue-5', sans-serif;
+  text-align: center;
+}
+
+.about-text a {
+  color: #ff6464;
+  text-decoration: none;  
+  transition: color 0.2s ease;
+}
+
+.about-text a:hover {
+  color: #535bf2;  /* Color when hovering - change this to your preferred hover color */
+}
+
+/* @import url('icons/bird0.png');
+@import url('icons/bird1.png'); */
+
+* {
+  cursor: url('icons/cursor0.png') 16 16, auto !important;
+}
+
+a,                   /* All links */
+button,             /* All buttons */
+.nav-item,          /* Navigation items */
+[role="button"],    /* Elements with button role */
+[onclick],          /* Elements with onclick handlers */
+select,             /* Dropdown menus */
+input[type="button"] {
+  cursor: url('icons/cursor1.png') 16 16, pointer !important;
+}
