@@ -7,6 +7,7 @@ import mouthIcon from './icons/mouth0.png';
 import mouthIcon1 from './icons/mouth2.png';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import About from './components/About';
+import Contact from './components/Contact';
 
 function NavContent() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ function NavContent() {
           <img src={eyeIcon1} alt="projects" className="icon-hover"/>
           <span className="nav-text">projects</span>
         </div>
-        <div className="nav-item">
+        <div className="nav-item" onClick={() => navigate('/contact')}>
           <img src={mouthIcon} alt="contact" className="icon-default"/>
           <img src={mouthIcon1} alt="contact" className="icon-hover"/>
           <span className="nav-text">contact</span>
@@ -40,6 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<NavContent />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
