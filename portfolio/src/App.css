@@ -123,6 +123,19 @@ button,             /* All buttons */
 [role="button"],    /* Elements with button role */
 [onclick],          /* Elements with onclick handlers */
 select,             /* Dropdown menus */
+.home-icon,
 input[type="button"] {
   cursor: url('icons/cursor1.png') 16 16, pointer !important;
+}
+
+.home-icon {
+  width: 30px;  /* adjust size as needed */
+  height: auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
 }

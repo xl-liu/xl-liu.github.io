@@ -10,6 +10,9 @@ import handIcon1 from './icons/hand1.png';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import About from './components/About';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
+import EpPage from './components/EpPage';
+import engineeringProjects from './data/engineeringProjects';
 
 function NavContent() {
   const navigate = useNavigate();
@@ -21,7 +24,7 @@ function NavContent() {
           <img src={eyeIcon1} alt="about" className="icon-hover" />
           <span className="nav-text">about</span>
         </div>
-        <div className="nav-item">
+        <div className="nav-item" onClick={() => navigate('/projects')}>
           <img src={mouthIcon} alt="projects" className="icon-default"/>
           <img src={mouthIcon1} alt="projects" className="icon-hover"/>
           <span className="nav-text">projects</span>
@@ -44,6 +47,9 @@ function App() {
           <Route path="/" element={<NavContent />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+            <Route path="/ep/:id" 
+            element={<EpPage projects={engineeringProjects} />} />
         </Routes>
       </div>
     </Router>
