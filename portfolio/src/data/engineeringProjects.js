@@ -4,6 +4,8 @@ import ep3 from '../assets/ep/ep3_2.jpg';
 import ep4 from '../assets/ep/ep4.jpg';
 import ep5 from '../assets/ep/ep5.jpg';
 import ep6 from '../assets/ep/ep6.jpg';
+import ep7 from '../assets/ep/ep7.jpg';
+import ep8 from '../assets/ep/ep8.jpg';
 
 const engineeringProjects = [
   { 
@@ -58,6 +60,22 @@ const engineeringProjects = [
     description: "hand pose regression using PPG",
     github: "https://github.com/...",
     year: "2024"
+  },
+  { 
+    id: 7, 
+    title: "RC car",
+    image: ep7,
+    path: "/ep7",
+    description: "RC toy car with analog speed sensor, PID controller, and digital circuit power control",
+    year: "2018"
+  },
+  { 
+    id: 8, 
+    title: "drone",
+    image: ep8,
+    path: "/ep8",
+    description: "automate network measurement using inhouse drones",
+    year: "2016"
   }
 ];
 

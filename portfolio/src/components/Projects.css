@@ -91,7 +91,7 @@
 
 .ep-item {
   position: relative;
-  min-width: 150px;
+  /* min-width: 150px; */
   height: 150px;
   cursor: pointer;
 }
@@ -116,7 +116,7 @@
   font-family: 'helvetica-neue-5';
   opacity: 0;
   transition: opacity 0.3s ease;
-  width: 80%;
+  width: 100%;
 }
 
 .ep-item:hover .ep-title {
@@ -127,6 +127,10 @@
 .ep-section .scroll-content,
 .ep-section .banner-content {
   animation: scrollRight 20s linear infinite;
+}
+
+.ep-section .scroll-row { 
+  height: 250px;
 }
 
 @keyframes scrollLeft {

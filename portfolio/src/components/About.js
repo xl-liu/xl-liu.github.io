@@ -1,4 +1,4 @@
-import profile from '../assets/profile/lidar.jpg';
+import profile from '../assets/profile/hololens.png';
 import homeIcon from '../icons/donotdisturb.png';
 function About() {
     return (
