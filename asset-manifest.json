@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.99cbfc6f.css",
-    "main.js": "/static/js/main.681983ae.js",
+    "main.css": "/static/css/main.356009ce.css",
+    "main.js": "/static/js/main.373ce34c.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/drawing8.jpg": "/static/media/drawing8.825c09a64d6d9a046089.jpg",
     "static/media/drawing19.jpg": "/static/media/drawing19.e0c2387d03b0b1ee6cd9.jpg",
@@ -12,11 +12,14 @@
     "static/media/drawing2.jpg": "/static/media/drawing2.4e43ca483be3966afe19.jpg",
     "static/media/drawing14.jpg": "/static/media/drawing14.fb621161ab74729c11fb.jpg",
     "static/media/drawing18.jpg": "/static/media/drawing18.9836c0cf420e02ef341c.jpg",
+    "static/media/hololens.png": "/static/media/hololens.3174f9294b493ae2613f.png",
     "static/media/drawing17.jpg": "/static/media/drawing17.32a4189855de6d819166.jpg",
+    "static/media/ep8.jpg": "/static/media/ep8.5e71591c4f89c6c09693.jpg",
     "static/media/drawing7.jpg": "/static/media/drawing7.3ee2260e59b94df26a99.jpg",
     "static/media/drawing6.jpg": "/static/media/drawing6.41e6cbde36975b6997d4.jpg",
     "static/media/drawing9.jpg": "/static/media/drawing9.9f4a28b4e71d86328900.jpg",
     "static/media/drawing11.jpg": "/static/media/drawing11.0b5285bcbb8637b680c1.jpg",
+    "static/media/ep7.jpg": "/static/media/ep7.e46efefacb678ea00e04.jpg",
     "static/media/drawing15.jpg": "/static/media/drawing15.4d20b19c9a8dfb474180.jpg",
     "static/media/drawing13.jpg": "/static/media/drawing13.3a37e1d74ef871fe31cd.jpg",
     "static/media/drawing10.jpg": "/static/media/drawing10.35dfcf75d5d71718753b.jpg",
@@ -31,17 +34,16 @@
     "static/media/drawing1.jpg": "/static/media/drawing1.8ad3213d8f0eca0e79a2.jpg",
     "static/media/ep5.jpg": "/static/media/ep5.dac4fa72424fc0989807.jpg",
     "static/media/ep6.jpg": "/static/media/ep6.f7fad31bf6fb67dfb834.jpg",
-    "static/media/lidar.jpg": "/static/media/lidar.dd7898e0e105df78cd30.jpg",
     "static/media/hand1.png": "/static/media/hand1.3cabf916d9a25c1568eb.png",
     "static/media/hand0.png": "/static/media/hand0.bd23787b64806d16e5df.png",
     "static/media/mouth2.png": "/static/media/mouth2.72fc1fb009d81e06392c.png",
     "index.html": "/index.html",
-    "main.99cbfc6f.css.map": "/static/css/main.99cbfc6f.css.map",
-    "main.681983ae.js.map": "/static/js/main.681983ae.js.map",
+    "main.356009ce.css.map": "/static/css/main.356009ce.css.map",
+    "main.373ce34c.js.map": "/static/js/main.373ce34c.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99cbfc6f.css",
-    "static/js/main.681983ae.js"
+    "static/css/main.356009ce.css",
+    "static/js/main.373ce34c.js"
   ]
 }
