@@ -106,7 +106,7 @@ function Projects() {
       {/* photos Title Banner */}
       <div className="title-banner">
         <div className="banner-content">
-          {[...Array(10)].map((_, i) => (
+          {[...Array(20)].map((_, i) => (
             <span key={i} className="banner-text">
               ⋆ Photography ⋆
             </span>

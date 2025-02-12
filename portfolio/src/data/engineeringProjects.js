@@ -10,7 +10,7 @@ import ep8 from '../assets/ep/ep8.jpg';
 const engineeringProjects = [
   { 
     id: 1, 
-    title: "ARGOS",
+    title: "microgravity simulator",
     image: ep1,
     path: "/ep1",
     description: "motor controller for ARGOS",
@@ -18,7 +18,7 @@ const engineeringProjects = [
   },
   { 
     id: 2, 
-    title: "AMZ",
+    title: "formula student",
     image: ep2,
     path: "/ep2",
     description: "autonomous driving, state estimation",
@@ -54,7 +54,7 @@ const engineeringProjects = [
   },
   { 
     id: 6, 
-    title: "PPG",
+    title: "hand pose",
     image: ep6,
     path: "/ep6",
     description: "hand pose regression using PPG",
@@ -63,7 +63,7 @@ const engineeringProjects = [
   },
   { 
     id: 7, 
-    title: "RC car",
+    title: "analog circuitry and RC car",
     image: ep7,
     path: "/ep7",
     description: "RC toy car with analog speed sensor, PID controller, and digital circuit power control",
@@ -71,7 +71,7 @@ const engineeringProjects = [
   },
   { 
     id: 8, 
-    title: "drone",
+    title: "autonomous drone",
     image: ep8,
     path: "/ep8",
     description: "automate network measurement using inhouse drones",

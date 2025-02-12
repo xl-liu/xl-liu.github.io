@@ -125,6 +125,8 @@ button,             /* All buttons */
 [onclick],          /* Elements with onclick handlers */
 select,             /* Dropdown menus */
 .home-icon,
+.ep-image,
+.ep-title,
 input[type="button"] {
   cursor: url('icons/cursor1.png') 16 16, pointer !important;
 }

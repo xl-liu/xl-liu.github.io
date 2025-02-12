@@ -22,7 +22,7 @@
 .banner-content {
   display: flex;
   white-space: nowrap;
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 40s linear infinite;
 }
 
 .banner-text {
@@ -30,6 +30,7 @@
   font-size: 24px;
   font-family: 'helvetica-neue-5';
   padding: 0 20px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -57,9 +58,10 @@
 .scroll-content {
   display: flex;
   position: absolute;
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 45s linear infinite;
   gap: 2px;
-  padding: 10px;
+  padding: 25px;
+  /* align-items: center; */
 }
 /* 
 .scroll-row:nth-child(2) .scroll-content,
@@ -67,7 +69,8 @@
   animation: scrollRight 20s linear infinite;
 } */
 
-.drawing-item {
+.drawing-item,
+.photo-item {
   /* min-width: 150px; */
   height: 150px;
   background: #e0e0e0;
@@ -77,11 +80,11 @@
   /* border-radius: 8px; */
 }
 
-.photo-item {
+/* .photo-item {
   height: 150px;
   object-fit: cover;
   margin: 0 10px;
-}
+} */
 
 .drawing-item:hover,
 .photo-item:hover {
@@ -120,13 +123,13 @@
 }
 
 .ep-item:hover .ep-title {
-  opacity: 1;
+  opacity: 1 ;
 }
 
 /* EP section scroll right */
 .ep-section .scroll-content,
 .ep-section .banner-content {
-  animation: scrollRight 20s linear infinite;
+  animation: scrollRight 40s linear infinite;
 }
 
 .ep-section .scroll-row { 
