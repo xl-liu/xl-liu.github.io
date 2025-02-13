@@ -33,10 +33,12 @@ const EpPage = ({ projects }) => {
       
       <div className="ep-content">
         <h1>{project.title}</h1>
+        {/* <h2>{project.subtitle}</h2> */}
+        <div className="ep-subtitle">{project.subtitle}</div>
         <img 
-          src={project.image} 
+          src={project.teaser} 
           alt={project.title} 
-          className="ep-hero-image"
+          className="ep-teaser"
         />
         <div className="ep-description">
           <p>{project.description}</p>

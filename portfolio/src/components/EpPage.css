@@ -1,17 +1,9 @@
 .ep-page {
     min-height: 100vh;
     padding: 40px;
-    width: 80%;
+    width: 60%;
     background: #ffffff;
-  }
-  
-  .back-button {
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
     font-family: 'helvetica-neue-5';
-    font-size: 18px;
   }
   
   .back-button:hover {
@@ -24,16 +16,19 @@
     /* padding: 40px; */
   }
   
-  .ep-hero-image {
-    width: 100%;
-    height: 400px;
+  .ep-teaser {
+    width: 80%;
     object-fit: cover;
-    border-radius: 8px;
     margin: 20px 0;
   }
   
-  .ep-description {
-    font-size: 18px;
+  .ep-subtitle {
+    font-size: 24px;
     line-height: 1.6;
-    margin-top: 40px;
+    color: #5ae638;
+  }
+  .ep-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
   }

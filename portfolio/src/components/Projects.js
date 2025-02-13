@@ -78,7 +78,7 @@ function Projects() {
               >
                 <div className="ep-title">{ep.title}</div>
                 <img 
-                  src={ep.image} 
+                  src={ep.preview} 
                   alt={ep.title}
                   className="ep-image"
                 />
@@ -93,7 +93,7 @@ function Projects() {
               >
                 <div className="ep-title">{ep.title}</div>
                 <img 
-                  src={ep.image} 
+                  src={ep.preview} 
                   alt={ep.title}
                   className="ep-image"
                 />
