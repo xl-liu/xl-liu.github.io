@@ -7,18 +7,32 @@ import mouthIcon from './icons/mouth0.png';
 import mouthIcon1 from './icons/mouth2.png';
 import handIcon from './icons/hand0.png';
 import handIcon1 from './icons/hand1.png';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
 import EpPage from './components/EpPage';
 import engineeringProjects from './data/engineeringProjects';
+import React from 'react';
 
 function NavContent() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [animationState, setAnimationState] = React.useState('final');
+
+  React.useEffect(() => {
+    if (!location.state?.skipAnimation) {
+      setAnimationState('initial');
+      setTimeout(() => setAnimationState('showHover'), 200);
+      setTimeout(() => setAnimationState('showText'), 2400);
+      setTimeout(() => setAnimationState('final'), 3200);
+    }
+  }, [location.state]);
+
   return (
     <div className="App">
-      <div className="nav-container">
+      <div className={`nav-container ${animationState}`}>
+        <div className="welcome-text"> --- welcome --- </div>
         <div className="nav-item" onClick={() => navigate('/about')}>
           <img src={eyeIcon} alt="about" className="icon-default" />
           <img src={eyeIcon1} alt="about" className="icon-hover" />

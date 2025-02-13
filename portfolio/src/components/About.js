@@ -1,6 +1,9 @@
 import profile from '../assets/profile/hololens.png';
 import homeIcon from '../icons/donotdisturb.png';
+import { useNavigate } from 'react-router-dom';
+
 function About() {
+    const navigate = useNavigate();
     return (
       <div className="about-container">
         <div className="about-content">
@@ -17,7 +20,7 @@ function About() {
           Before that, I spent two years as a systems engineer at <a href="https://technology.nasa.gov/patent/MSC-TOPS-60">ARGOS</a>, 
           a gravity simulator at NASA Johnson Space Center's robotics branch. 
           </p>
-          <a href="/" className="home-link">
+          <a href="/" className="home-link" onClick={() => navigate('/', { state: { skipAnimation: true } })}>
             <img src={homeIcon} alt="home" className="home-icon" />
           </a>
         </div>

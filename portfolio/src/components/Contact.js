@@ -1,6 +1,8 @@
 import homeIcon from '../icons/donotdisturb.png';
+import { useNavigate } from 'react-router-dom';  // Add this import
 
 function Contact() {
+    const navigate = useNavigate();
     return (
       <div className="about-container">
         <div className="about-content">
@@ -16,7 +18,7 @@ function Contact() {
             <a href="mailto:xintongliu211@gmail.com">Email</a>
             {'   '}-
           </p>
-          <a href="/" className="home-link">
+          <a href="/" className="home-link" onClick={() => navigate('/', { state: { skipAnimation: true } })}>
             <img src={homeIcon} alt="home" className="home-icon" />
           </a>
         </div>

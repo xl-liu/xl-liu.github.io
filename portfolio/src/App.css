@@ -11,6 +11,8 @@
 }
 
 .nav-container {
+  position: relative;  
+  padding-top: 40px; 
   display: flex;
   gap: 2rem;
 }
@@ -51,7 +53,7 @@
   font-size: 1.2rem;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 /* Show hover icon and hide default icon on hover */
@@ -141,4 +143,94 @@ input[type="button"] {
 .home-link {
   display: flex;
   justify-content: center;
+}
+
+.icon-default, .icon-hover {
+  opacity: 0; 
+  transition: opacity 0.8s ease;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 0;  /* Changed from -50px to 0 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 1.4rem; 
+  font-family: 'helvetica-neue-5';
+}
+
+.nav-container.initial .welcome-text,
+.nav-container.initial .icon-default,
+.nav-container.initial .icon-hover,
+.nav-container.initial .nav-text {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.nav-container.showHover .nav-item:nth-child(2) .icon-hover,
+.nav-container.initial .nav-item:nth-child(2) .icon-hover{
+  transition-delay: 0.8s;  
+}
+.nav-container.showHover .nav-item:nth-of-type(3) .icon-hover,
+.nav-container.initial .nav-item:nth-of-type(3) .icon-hover{
+  transition-delay: 1.2s; 
+}
+.nav-container.showHover .nav-item:nth-child(4) .icon-hover,
+.nav-container.initial .nav-item:nth-child(4) .icon-hover{
+  transition-delay: 1.6s; 
+}
+
+.nav-container.initial .nav-text {
+  transition-delay: 2.0s; 
+}
+
+.nav-container.showHover .welcome-text,
+.nav-container.showHover .icon-hover {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.nav-container.final .welcome-text,
+.nav-container.final .icon-default,
+.nav-container.final .icon-hover,
+.nav-container.final .nav-text {
+  opacity: 0;
+  transition: opacity 0.8s ease; 
+}
+
+.nav-container.showText .icon-hover {
+  opacity: 1;
+}
+
+.nav-container.showText .nav-text {
+  opacity: 1;
+  transform: translateY(10);
+}
+
+.nav-container.final .icon-default {
+  opacity: 1;
+}
+
+.nav-container.final .icon-hover,
+.nav-container.final .nav-text {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Keep existing hover states */
+.nav-container.final .nav-item:hover .icon-hover {
+  opacity: 1;
+}
+
+.nav-container.final .nav-item:hover .icon-default {
+  opacity: 0;
+}
+
+.nav-container.final .nav-item:hover .nav-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
