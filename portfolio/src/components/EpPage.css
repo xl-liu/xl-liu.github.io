@@ -1,39 +1,32 @@
 .ep-page {
-    min-height: 100vh;
-    padding: 40px;
-    width: 60%;
-    background: #ffffff;
-    font-family: 'helvetica-neue-5';
-  }
+  min-height: 100vh;
+  padding: 40px;
+  width: 60%;
+  background: #ffffff;
+  font-family: 'helvetica-neue-5';
+}
 
-  .ep-nav-icons {
-    position: relative;
-    display: flex;
-    gap: 1rem;
-    width: 20%;
-  }
-  
-  .ep-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    /* padding: 40px; */
-  }
-  
-  .ep-teaser {
-    width: 80%;
-    object-fit: cover;
-    margin: 20px 0;
-  }
-  
-  .ep-subtitle {
-    margin-top: -20px;
-    padding-left: 20px;
-    font-size: 24px;
-    line-height: 1.6;
-    color: #5ae638;
-  }
-  .ep-description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 20px;
-  }
+.ep-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 40px; */
+}
+
+.ep-teaser {
+  width: 80%;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+.ep-subtitle {
+  margin-top: -20px;
+  padding-left: 20px;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #5ae638;
+}
+.ep-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+}

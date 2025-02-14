@@ -95,7 +95,7 @@
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 80%;
   line-height: 1.6;
   font-size: 0.8 rem;
   font-family: 'helvetica-neue-5', sans-serif;
@@ -233,4 +233,43 @@ input[type="button"] {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.nav-item-page {
+  width: 60%;
+  position: relative;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.nav-item-page .nav-item .icon-default,
+.nav-item-page .nav-item .icon-hover {
+  width: 48px;
+  height: 48px;
+}
+
+.nav-item-page .nav-item .icon-default {
+  opacity: 1; /* Make default icons visible by default */
+}
+
+.nav-item-page .nav-item {
+  flex-direction: column;
+  width: auto; /* Prevent full-width behavior */
+}
+
+/* Maintain existing hover behavior */
+.nav-item-page .nav-item:hover .icon-default {
+  opacity: 0;
+}
+
+.nav-item-page .nav-item:hover .icon-hover {
+  opacity: 1;
+}
+
+.nav-item-page .nav-item .nav-text {
+  font-size: 0.8rem;
+  font-family: 'helvetica-neue-5';
 }

@@ -1,5 +1,7 @@
-import homeIcon from '../icons/donotdisturb.png';
-import { useNavigate } from 'react-router-dom';  // Add this import
+// import homeIcon from '../icons/donotdisturb.png';
+import { useNavigate } from 'react-router-dom';
+import homeIcon from '../icons/tree.png';
+import homeIcon1 from '../icons/tree1.png';
 
 function Contact() {
     const navigate = useNavigate();
@@ -18,9 +20,13 @@ function Contact() {
             <a href="mailto:xintongliu211@gmail.com">Email</a>
             {'   '}-
           </p>
-          <a href="/" className="home-link" onClick={() => navigate('/', { state: { skipAnimation: true } })}>
-            <img src={homeIcon} alt="home" className="home-icon" />
-          </a>
+          <div className="nav-item-page" style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="nav-item" onClick={() => navigate('/', { state: { skipAnimation: true } })}>
+              <img src={homeIcon} alt="home" className="icon-default" />
+              <img src={homeIcon1} alt="home" className="icon-hover" />
+              <span className="nav-text">home</span>
+            </div>
+          </div>
         </div>
       </div>
     );
