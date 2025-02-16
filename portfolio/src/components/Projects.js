@@ -1,27 +1,58 @@
-import './Projects.css';
-import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-
-import drawings from '../data/drawingDetails';
-import engineeringProjects from '../data/engineeringProjects';
-import photos from '../data/photoDetails';
+import "./Projects.css";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import drawings from "../data/drawingDetails";
+import engineeringProjects from "../data/engineeringProjects";
+import photos from "../data/photoDetails";
 
 function Projects() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const start = Date.now();
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const newProgress = Math.min(100, (elapsed / 2000) * 100);
+      setProgress(Math.floor(newProgress));
+      if (newProgress >= 100) {
+        clearInterval(timer);
+        setLoading(false);
+      }
+    }, 30);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleEpClick = (path) => {
-    const id = path.replace('/', '');
+    const id = path.replace("/", "");
     navigate(`/ep/${id}`);
   };
 
+  const bgValue = 255 - Math.floor((progress / 100) * 255);
+  const textValue = Math.floor((progress / 100) * 255);
+
   return (
     <div className="projects-container">
-
-      {/* drawings Title Banner */}
+      {loading && (
+        <div
+          className="loader-overlay"
+          style={{
+            backgroundColor: `rgb(${bgValue}, ${bgValue}, ${bgValue})`
+          }}
+        >
+          <span
+            className="progress-text"
+            style={{
+              color: `rgb(${textValue}, ${textValue}, ${textValue})`
+            }}
+          >
+            {progress}%
+          </span>
+        </div>
+      )}
       <div className="title-banner">
         <div className="banner-content">
-          {/* Repeat text multiple times for continuous scroll */}
           {[...Array(20)].map((_, i) => (
             <span key={i} className="banner-text">
               ⋆ Drawing ⋆
@@ -29,8 +60,6 @@ function Projects() {
           ))}
         </div>
       </div>
-
-      {/* drawings row */}
       <div className="scroll-row">
         <div className="scroll-track">
           <div className="scroll-content">
@@ -42,7 +71,6 @@ function Projects() {
                 className="drawing-item"
               />
             ))}
-            {/* Duplicate for seamless scrolling */}
             {drawings.map((img, index) => (
               <img 
                 key={`dup-${index}`} 
@@ -54,8 +82,6 @@ function Projects() {
           </div>
         </div>
       </div>
-
-      {/* engineering projects Title Banner */}
       <div className="title-banner ep-section">
         <div className="banner-content">
           {[...Array(10)].map((_, i) => (
@@ -65,8 +91,6 @@ function Projects() {
           ))}
         </div>
       </div>
-
-      {/* engineering projects row */}
       <div className="scroll-row ep-section">
         <div className="scroll-track">
           <div className="scroll-content">
@@ -84,7 +108,6 @@ function Projects() {
                 />
               </div>
             ))}
-            {/* Duplicate for seamless scrolling */}
             {engineeringProjects.map((ep) => (
               <div 
                 key={`dup-${ep.id}`} 
@@ -102,8 +125,6 @@ function Projects() {
           </div>
         </div>
       </div>
-
-      {/* photos Title Banner */}
       <div className="title-banner">
         <div className="banner-content">
           {[...Array(20)].map((_, i) => (
@@ -113,8 +134,6 @@ function Projects() {
           ))}
         </div>
       </div>
-
-      {/* photos row */}    
       <div className="scroll-row">
         <div className="scroll-track">
           <div className="scroll-content">
@@ -126,7 +145,6 @@ function Projects() {
                 className="photo-item"
               />
             ))}
-            {/* Duplicate for seamless scrolling */}
             {photos.map((img, index) => (
               <img 
                 key={`dup-${index}`} 
@@ -138,43 +156,8 @@ function Projects() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
 
 export default Projects;
-
-// for troubleshooting
-// function Projects() {
-//     return (
-//       <div className="projects-container">
-//         {/* Test content */}
-//         <div className="scroll-row">
-//           <h2>Drawings Row</h2>
-//           <div className="scroll-content">
-//             <div>Drawing 1</div>
-//             <div>Drawing 2</div>
-//           </div>
-//         </div>
-  
-//         <div className="scroll-row">
-//           <h2>Projects Row</h2>
-//           <div className="scroll-content">
-//             <div>Project 1</div>
-//             <div>Project 2</div>
-//           </div>
-//         </div>
-  
-//         <div className="scroll-row">
-//           <h2>Photos Row</h2>
-//           <div className="scroll-content">
-//             <div>Photo 1</div>
-//             <div>Photo 2</div>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-  
-//   export default Projects;
